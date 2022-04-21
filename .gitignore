@@ -1,0 +1,14 @@
+# Build results
+
+[Ll]og/
+.vscode/*
+
+*.pyc
+*.pt
+*.log
+*.pth
+
+__pycache__/
+
+data/
+
