@@ -6,7 +6,7 @@
 *.pyc
 *.pt
 *.log
-*.pth
+*.csv
 
 __pycache__/
 
