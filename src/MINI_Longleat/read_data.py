@@ -4,7 +4,7 @@ import pandas as pd
 
 PATH  =  os.path.dirname(os.path.abspath(__file__))
 
-df = pd.read_csv(os.path.join(PATH, '..\\' 'data', 'MINI Longleat 12042022.csv'), header=0)
+df = pd.read_csv(os.path.join(PATH, '..', '..', 'data', 'MINI Longleat 12042022.csv'), header=0)
 
 # Print the first 5 rows of the dataframe
 print(df.head())
