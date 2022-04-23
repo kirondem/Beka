@@ -7,27 +7,41 @@ file_path = os.path.join(PATH, '..', '..',  'data', 'MINI Longleat 12042022.csv'
 
 #file_path = "C:\\Work\\Beka\\data\\MINI Longleat 12042022.csv"
 
+# 1) Read the data from the csv file into a pandas dataframe
 df = pd.read_csv(file_path, header=0)
 
-# Print the first 5 rows of the dataframe
-print(df.tail(10))
+# 2)  Get shape of the dataframe
+no_of_rows_colums = df.shape
+print(no_of_rows_colums)
 
-#Get all columns
-print(df.columns)
+# 3) Get all columns
+columns = df.columns
+columns = list(columns)
+print(columns)
 
-# Get shape of the dataframe
-print(df.shape)
+# 4) Print the first 5 rows of the dataframe
+first_X_rows = df.head()
+print(first_X_rows)
 
-#Get unique values in a column
-print(df['Customer Vehicle Relation Type Code (Contact Vehicle UK)'].value_counts())
+# 5) Print the last 10 rows of the dataframe
+last_X_rows = df.tail(10) 
+print(last_X_rows)
 
-#select all rows with NaN values
-null_NBV1 = df[df['NBV1'].isnull()]
-print(null_NBV1)
-
-# select all unique values for a column
+# 6) select all unique values for a column
 unique_NBV1 = df['NBV1'].unique()
 print(unique_NBV1)
 
-# Drop DateTime column
+# 7) Get unique values in a column
+unique_with_count_NBV1 = df['NBV1'].value_counts()
+print(unique_with_count_NBV1)
+
+
+# 8) select all rows with NaN values
+null_NBV1 = df[df['NBV1'].isnull()]
+print(null_NBV1)
+
+# 9) Drop Contact Key column
 df = df.drop(columns=['Contact Key'])
+# Print the first 5 rows of the dataframe
+first_X_rows = df.head()
+print(first_X_rows)
